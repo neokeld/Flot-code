@@ -1,0 +1,18 @@
+Pb de conception de réseaux :
+-Ens de terminaux. Pb est de relier ces terminaux entre eux pour un cout minimum de manière à ce que : 
+    - il existe un chemin entre toutes paires de terminaux
+    -ce réseau soit résistant aux pannes (si un certain nombre d"arêtes tombent en panne, il faut que le réseau reste connecté)
+Une conidtion qui s'est révélée suffisante est que le réseau soit 2 arête connexe (entre toute paire de sommets il existe 2 chemins arête-disjoints)on s'interdit de doubler les liaisons
+
+On va imposer que chaqye lien du réseau appartienne à un cycle de longueur bornée par un nombre K
+
+Données du problème :
+Graphe G = (V, E)
+    V : ens des terminaux
+    E : ens des liens possibles
+        (on suppose que le graphe est complet.
+         on peut créer tous les liens que l'on veut)
+
+Cij = Coût de construction du lien {i, j} pour tout {i, j} appartenant à E
+-> K : un entier (borne sur les cycles)
+Pb : déterminer les liens de E à créer tel que le graphe soit connexe et que chaque arête appartienne à un cycle de  longueur <= K tout en minimisant le coût.

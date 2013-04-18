@@ -1,0 +1,3 @@
+Faire un kruskal pour trouver un arbre couvrant minimal
+Pendant le kruskal stocker les feuilles
+Depuis les feuilles faire des parcours en profondeur de longueur k-1 et relier aux autres feuilles trouvées
