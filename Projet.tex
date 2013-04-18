@@ -1,0 +1,82 @@
+\documentclass[frenchb]{article}
+	
+	\usepackage[utf8]{inputenc}
+	%\usepackage{mathaccent}
+	\usepackage{xspace}
+	\usepackage[francais]{babel}
+	
+	\begin{document}
+		\begin{title}
+			\textbf{\huge{Projet Flot et combinatoire}}
+		\end{title}
+		
+		
+		\section {	Enoncé}
+			Lors de la conception de réseaux de télécommunications, il est nécessaire non seulement de mettre en oeuvre des liaisons entre toutes les paires possibles de terminaux, mais également d'assurer le fonctionnement du réseau lors de la panne d'un lien. A cette fin, on va imp oser, p our chacun des liens, qu'il existe un autre chemin, de longueur limitée, p ermettant de rerouter l'information en cas de panne du lien. Connaissant le coût d'établissement des liens, cette topologie de réseau doit être conçue pour un coût minimum.
+			\begin{itemize}
+				\item{Modéliser ce problème dans un graphe}
+				\item{Quelle structure permet d'avoir toutes les communications possibles pour un coût minimum ?}
+				\item{Comment mettre en place la fiabilité du réseau en cas de panne ?}
+			\end{itemize}
+			
+			
+			\section{Analyse}
+				Pb de conception de réseaux:
+				Ens de terminaux. Pb est de relier ces terminaux entre eux pour un coût minimum de manière à ce que:
+				\begin{itemize}
+					\item{Il existe un chemin entre toutes paures de terminaux}
+					\item{Ce réseau soit résistant aux pannes (Si un certain nombre d'arêtes tombent en panne, il faut que le réseau reste connecté)} 
+				\end{itemize}
+				
+				Une condition qui s'est révélée suffisante est que le réseau soit 2 arêtes connexes (entre toute paire de sommets, il existe 2 chemins arête-disjoints)\\
+				
+				On va imposer que chaque lien du réseau appartienne à un cycle de longueur bornée par un nombre K\\
+				Données du problème:\\
+				
+				Graphe = (V,E) \\
+				V: ens des terminaux.\\
+				E: ens des liens possibles.\\
+				(on suppose que le graphe est complet (donc $E=V*V$) On peut créer tous les liens que l'on veut)\\
+				
+				$C_{ij}$ = Cout de construction du lien i,j $\forall $ i,j $\in E $\\
+				
+				$\rightarrow $K, un entier (borne sur les cycles)\\
+				
+				Pb: déterminer les liens de E à créer tel que le graphe soit connexe et que chaque arête appartienne à un cycle de longueur $\le K$ tout en minimisant le coût.\\
+				
+				
+				
+				Données: \# noeud coord\_x  coord\_y\\
+				
+				$C_{ij}$ : distance euclidienne entre les extrémités.\\
+				
+				ulbnodes $\rightarrow$ instance réelle de belgacom.\\
+				
+				
+				$
+				\left.
+				\begin{array}{l}
+					\mbox{nodes1}\\
+					\mbox{nodes2}\\
+					\mbox{nodes3}
+				\end{array}
+				\right \}$sous ensemble de ulbnodes 
+				
+				
+				n20-3 $\rightarrow$ instances aleatoires (20 noeuds , inst \#3)
+				
+				
+				
+				Problème de couverture de l'exo 2 du td 2.\\
+				Rapport: 
+				\begin{itemize}
+					\item Introduction présentant le problème.\\
+					\item Explication de /des heuristiques que l'on propose.(algos , explication de l'algo et des éléments de base utilisées par l'algo)\\
+					\item Résultats numériques+analyse des résultats numériques.
+					\item conclusion
+				\end{itemize}
+				Rapport + Code par mail pour le \textbf{17 Mai}
+				
+				
+				
+			\end{document}			
