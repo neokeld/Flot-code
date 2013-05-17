@@ -1,0 +1,2576 @@
+organism:
+  *
+    {x}
+    {x}
+generation 0: <MyProg:750.61849914> best=750.61849914 average=1.53114115123e+13)
+organism:
+  *
+    {x}
+    {x}
+generation 1: <MyProg:750.61849914> best=750.61849914 average=43688.8821798)
+organism:
+  *
+    {x}
+    {x}
+generation 2: <MyProg:750.61849914> best=750.61849914 average=39368.4336422)
+organism:
+  *
+    {x}
+    {x}
+generation 3: <MyProg:750.61849914> best=750.61849914 average=31787.3659514)
+organism:
+  *
+    {x}
+    {x}
+generation 4: <MyProg:750.61849914> best=750.61849914 average=26254.812543)
+organism:
+  *
+    {x}
+    {x}
+generation 5: <MyProg:750.61849914> best=750.61849914 average=23959.1285902)
+organism:
+  *
+    {x}
+    {x}
+generation 6: <MyProg:750.61849914> best=750.61849914 average=21541.1548214)
+organism:
+  +
+    +
+      *
+        {1.0}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 7: <MyProg:20.0> best=20.0 average=20226.7824791)
+organism:
+  +
+    +
+      *
+        {1.0}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {1.0}
+generation 8: <MyProg:20.0> best=2863.55329474 average=20254.4054382)
+organism:
+  +
+    +
+      *
+        {1.0}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {1.0}
+generation 9: <MyProg:20.0> best=2863.55329474 average=17297.5145844)
+organism:
+  +
+    +
+      *
+        {1.0}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {1.0}
+generation 10: <MyProg:20.0> best=2863.55329474 average=12496.3257785)
+organism:
+  +
+    +
+      *
+        {1.0}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {1.0}
+generation 11: <MyProg:20.0> best=2863.55329474 average=8082.55740405)
+organism:
+  +
+    +
+      *
+        {1.0}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {1.0}
+generation 12: <MyProg:20.0> best=2863.55329474 average=12904.798326)
+organism:
+  +
+    +
+      *
+        {1.0}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 13: <MyProg:20.0> best=2858.59413857 average=10380.8108146)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 14: <MyProg:20.0> best=111959.483626 average=13813.7202158)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 15: <MyProg:20.0> best=111959.483626 average=15871.5641702)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 16: <MyProg:20.0> best=111959.483626 average=16298.9367013)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 17: <MyProg:20.0> best=111959.483626 average=17485.8153018)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 18: <MyProg:20.0> best=111959.483626 average=14358.6053896)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 19: <MyProg:20.0> best=111959.483626 average=17489.4104856)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 20: <MyProg:20.0> best=111959.483626 average=18862.1957877)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 21: <MyProg:20.0> best=111959.483626 average=14278.2817307)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 22: <MyProg:20.0> best=111959.483626 average=14318.989453)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 23: <MyProg:20.0> best=111959.483626 average=16163.1123672)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 24: <MyProg:20.0> best=111959.483626 average=15266.4849705)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 25: <MyProg:20.0> best=111959.483626 average=14273.2274579)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 26: <MyProg:20.0> best=111959.483626 average=17422.0065281)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 27: <MyProg:20.0> best=111959.483626 average=16509.6525177)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 28: <MyProg:20.0> best=111959.483626 average=9469.29798668)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 29: <MyProg:20.0> best=111959.483626 average=5172.62674368)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 30: <MyProg:20.0> best=111959.483626 average=7875.81508888)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 31: <MyProg:20.0> best=111959.483626 average=8358.50420302)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 32: <MyProg:20.0> best=111959.483626 average=9795.90901237)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 33: <MyProg:20.0> best=111959.483626 average=10955.9107237)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 34: <MyProg:20.0> best=111959.483626 average=5347.92426578)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 35: <MyProg:20.0> best=111959.483626 average=10688.111651)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 36: <MyProg:20.0> best=111959.483626 average=11045.8178224)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 37: <MyProg:20.0> best=111959.483626 average=14759.300272)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 38: <MyProg:20.0> best=111959.483626 average=13426.4352318)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 39: <MyProg:20.0> best=111959.483626 average=6567.93812513)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 40: <MyProg:20.0> best=111959.483626 average=14221.2435892)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 41: <MyProg:20.0> best=111959.483626 average=6694.91098176)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 42: <MyProg:20.0> best=111959.483626 average=12213.9701041)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 43: <MyProg:20.0> best=111959.483626 average=7206.2501731)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    +
+      +
+        {1.0}
+        +
+          {x}
+          {x}
+      {0.0}
+generation 44: <MyProg:20.0> best=111959.483626 average=6331.99261766)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {x}
+generation 45: <MyProg:20.0> best=104291.685185 average=11220.2044069)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {x}
+generation 46: <MyProg:20.0> best=104291.685185 average=5537.02251738)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {x}
+generation 47: <MyProg:20.0> best=104291.685185 average=10894.9071044)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 48: <MyProg:20.0> best=98588.1520869 average=12963.1116421)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 49: <MyProg:20.0> best=98588.1520869 average=11907.0579998)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 50: <MyProg:20.0> best=98588.1520869 average=12029.6363471)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 51: <MyProg:20.0> best=98588.1520869 average=11625.622749)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 52: <MyProg:20.0> best=98588.1520869 average=12765.5171949)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 53: <MyProg:20.0> best=98588.1520869 average=14608.0147398)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 54: <MyProg:20.0> best=98588.1520869 average=12381.0645844)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 55: <MyProg:20.0> best=98588.1520869 average=14831.0890713)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 56: <MyProg:20.0> best=98588.1520869 average=9420.57825668)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 57: <MyProg:20.0> best=98588.1520869 average=14649.9365964)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 58: <MyProg:20.0> best=98588.1520869 average=13167.0396119)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 59: <MyProg:20.0> best=98588.1520869 average=14853.3110124)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 60: <MyProg:20.0> best=98588.1520869 average=11177.0148867)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 61: <MyProg:20.0> best=98588.1520869 average=7405.41364713)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 62: <MyProg:20.0> best=98588.1520869 average=12319.2797432)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 63: <MyProg:20.0> best=98588.1520869 average=5719.01623707)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 64: <MyProg:20.0> best=98588.1520869 average=4538.59371246)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 65: <MyProg:20.0> best=98588.1520869 average=15655.0945789)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 66: <MyProg:20.0> best=98588.1520869 average=9875.95286154)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 67: <MyProg:20.0> best=98588.1520869 average=11956.3613791)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 68: <MyProg:20.0> best=98588.1520869 average=17899.2806251)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 69: <MyProg:20.0> best=98588.1520869 average=15850.9309212)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 70: <MyProg:20.0> best=98588.1520869 average=14438.3791375)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 71: <MyProg:20.0> best=98588.1520869 average=15947.0621953)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 72: <MyProg:20.0> best=98588.1520869 average=16603.6922912)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 73: <MyProg:20.0> best=98588.1520869 average=16007.2627123)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 74: <MyProg:20.0> best=98588.1520869 average=17903.3283093)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 75: <MyProg:20.0> best=98588.1520869 average=14220.3860889)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 76: <MyProg:20.0> best=98588.1520869 average=14941.0778596)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 77: <MyProg:20.0> best=98588.1520869 average=17492.4091787)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      +
+        {1.0}
+        +
+          {0.0}
+          *
+            {x}
+            {x}
+    {0.0}
+generation 78: <MyProg:20.0> best=98588.1520869 average=11838.8984492)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {0.0}
+generation 79: <MyProg:20.0> best=106977.94897 average=10150.9634771)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {0.0}
+generation 80: <MyProg:20.0> best=106977.94897 average=4394.27398635)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {0.0}
+generation 81: <MyProg:20.0> best=106977.94897 average=15920.9702381)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {0.0}
+generation 82: <MyProg:20.0> best=106977.94897 average=13963.6324986)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {0.0}
+generation 83: <MyProg:20.0> best=106977.94897 average=12452.5401036)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {0.0}
+generation 84: <MyProg:20.0> best=106977.94897 average=13061.9621426)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {0.0}
+generation 85: <MyProg:20.0> best=106977.94897 average=9631.83374689)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {0.0}
+generation 86: <MyProg:20.0> best=106977.94897 average=7574.34436554)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {0.0}
+generation 87: <MyProg:20.0> best=106977.94897 average=11879.4727449)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 88: <MyProg:20.0> best=116058.605259 average=11184.501256)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 89: <MyProg:20.0> best=116058.605259 average=15326.8543444)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 90: <MyProg:20.0> best=116058.605259 average=11361.1282689)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 91: <MyProg:20.0> best=116058.605259 average=18171.6763075)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 92: <MyProg:20.0> best=116058.605259 average=7871.97324433)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 93: <MyProg:20.0> best=116058.605259 average=4626.905084)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 94: <MyProg:20.0> best=116058.605259 average=6583.31383891)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 95: <MyProg:20.0> best=116058.605259 average=10040.3717078)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 96: <MyProg:20.0> best=116058.605259 average=7081.71248962)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 97: <MyProg:20.0> best=116058.605259 average=6117.50804487)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 98: <MyProg:20.0> best=116058.605259 average=4684.05440975)
+organism:
+  +
+    +
+      *
+        +
+          {1.0}
+          +
+            {10.0}
+            {x}
+        {y}
+      {y}
+    {x}
+generation 99: <MyProg:20.0> best=116058.605259 average=3773.12399857)
+failed after 100 generations, restarting
+organism:
+  *
+    {x}
+    {x}
+generation 100: <MyProg:750.61849914> best=750.61849914 average=8.27153537438e+11)
+organism:
+  *
+    {x}
+    {x}
+generation 101: <MyProg:750.61849914> best=750.61849914 average=36821.9091389)
+organism:
+  *
+    {x}
+    {x}
+generation 102: <MyProg:750.61849914> best=750.61849914 average=34354.4180782)
+organism:
+  *
+    {x}
+    {x}
+generation 103: <MyProg:750.61849914> best=750.61849914 average=31174.7404363)
+organism:
+  *
+    {x}
+    {x}
+generation 104: <MyProg:750.61849914> best=750.61849914 average=21009.7680134)
+organism:
+  *
+    {x}
+    {x}
+generation 105: <MyProg:750.61849914> best=750.61849914 average=13430.2241774)
+organism:
+  *
+    {x}
+    {x}
+generation 106: <MyProg:750.61849914> best=750.61849914 average=15353.7971952)
+organism:
+  *
+    {x}
+    {x}
+generation 107: <MyProg:750.61849914> best=750.61849914 average=17492.2370768)
+organism:
+  *
+    {x}
+    {x}
+generation 108: <MyProg:750.61849914> best=750.61849914 average=5338.10542541)
+organism:
+  *
+    {x}
+    {x}
+generation 109: <MyProg:750.61849914> best=750.61849914 average=6222.10675922)
+organism:
+  *
+    {x}
+    {x}
+generation 110: <MyProg:750.61849914> best=750.61849914 average=5540.57454646)
+organism:
+  *
+    {x}
+    +
+      +
+        *
+          {0.0}
+          {x}
+        {0.0}
+      {x}
+generation 111: <MyProg:750.61849914> best=750.61849914 average=7966.69330828)
+organism:
+  *
+    {x}
+    {x}
+generation 112: <MyProg:750.61849914> best=750.61849914 average=8568.0291677)
+organism:
+  *
+    {x}
+    {x}
+generation 113: <MyProg:750.61849914> best=750.61849914 average=12363.6290983)
+organism:
+  *
+    {x}
+    {x}
+generation 114: <MyProg:750.61849914> best=750.61849914 average=8878.62706572)
+organism:
+  *
+    {x}
+    {x}
+generation 115: <MyProg:750.61849914> best=750.61849914 average=12734.6964124)
+organism:
+  *
+    {x}
+    *
+      {1.0}
+      {x}
+generation 116: <MyProg:750.61849914> best=750.61849914 average=8183.12043219)
+organism:
+  *
+    {x}
+    {x}
+generation 117: <MyProg:750.61849914> best=750.61849914 average=7931.03613744)
+organism:
+  *
+    {x}
+    {x}
+generation 118: <MyProg:750.61849914> best=750.61849914 average=9329.32831077)
+organism:
+  *
+    {x}
+    {x}
+generation 119: <MyProg:750.61849914> best=750.61849914 average=11017.3782446)
+organism:
+  *
+    *
+      {x}
+      {1.0}
+    {x}
+generation 120: <MyProg:750.61849914> best=750.61849914 average=17079.2893215)
+organism:
+  *
+    {x}
+    {x}
+generation 121: <MyProg:750.61849914> best=750.61849914 average=10068.6632831)
+organism:
+  *
+    {x}
+    {x}
+generation 122: <MyProg:750.61849914> best=750.61849914 average=16749.8696206)
+organism:
+  *
+    {x}
+    {x}
+generation 123: <MyProg:750.61849914> best=750.61849914 average=12004.575111)
+organism:
+  *
+    {x}
+    {x}
+generation 124: <MyProg:750.61849914> best=750.61849914 average=11450.1778951)
+organism:
+  *
+    {x}
+    +
+      *
+        *
+          {x}
+          +
+            {1.0}
+            {y}
+        *
+          *
+            {x}
+            {y}
+          *
+            {y}
+            {0.0}
+      {x}
+generation 125: <MyProg:750.61849914> best=750.61849914 average=10399.4019132)
+organism:
+  *
+    *
+      {x}
+      {1.0}
+    {x}
+generation 126: <MyProg:750.61849914> best=750.61849914 average=13519.6354635)
+organism:
+  *
+    *
+      {1.0}
+      *
+        {x}
+        +
+          {0.0}
+          {1.0}
+    {x}
+generation 127: <MyProg:750.61849914> best=750.61849914 average=9369.53883869)
+organism:
+  *
+    {x}
+    {x}
+generation 128: <MyProg:750.61849914> best=750.61849914 average=9951.14527159)
+organism:
+  *
+    +
+      *
+        {2.0}
+        {0.0}
+      *
+        {x}
+        {1.0}
+    {x}
+generation 129: <MyProg:750.61849914> best=750.61849914 average=12037.841293)
+organism:
+  *
+    +
+      *
+        +
+          {1.0}
+          {1.0}
+        {0.0}
+      *
+        {x}
+        {1.0}
+    {x}
+generation 130: <MyProg:750.61849914> best=750.61849914 average=18671.7413216)
+organism:
+  *
+    {x}
+    +
+      *
+        {x}
+        *
+          *
+            {10.0}
+            {y}
+          *
+            {y}
+            {0.0}
+      {x}
+generation 131: <MyProg:750.61849914> best=750.61849914 average=10319.6304681)
+organism:
+  *
+    {x}
+    +
+      {0.0}
+      {x}
+generation 132: <MyProg:750.61849914> best=750.61849914 average=13799.6353075)
+organism:
+  *
+    {x}
+    {x}
+generation 133: <MyProg:750.61849914> best=750.61849914 average=12041.4222964)
+organism:
+  *
+    {x}
+    {x}
+generation 134: <MyProg:750.61849914> best=750.61849914 average=17951.6922039)
+organism:
+  *
+    {x}
+    {x}
+generation 135: <MyProg:750.61849914> best=750.61849914 average=15193.5747914)
+organism:
+  *
+    {x}
+    {x}
+generation 136: <MyProg:750.61849914> best=750.61849914 average=14804.9380832)
+organism:
+  *
+    {x}
+    {x}
+generation 137: <MyProg:750.61849914> best=750.61849914 average=19114.4171787)
+organism:
+  *
+    {x}
+    {x}
+generation 138: <MyProg:750.61849914> best=750.61849914 average=9157.2319912)
+organism:
+  *
+    {x}
+    {x}
+generation 139: <MyProg:750.61849914> best=750.61849914 average=14289.9353818)
+organism:
+  *
+    {x}
+    {x}
+generation 140: <MyProg:750.61849914> best=750.61849914 average=16446.9259094)
+organism:
+  *
+    +
+      {x}
+      {0.0}
+    {x}
+generation 141: <MyProg:750.61849914> best=750.61849914 average=10941.2689562)
+organism:
+  *
+    {x}
+    {x}
+generation 142: <MyProg:750.61849914> best=750.61849914 average=11424.8649124)
+organism:
+  *
+    {x}
+    {x}
+generation 143: <MyProg:750.61849914> best=750.61849914 average=8687.85066163)
+organism:
+  *
+    {x}
+    {x}
+generation 144: <MyProg:750.61849914> best=750.61849914 average=14976.3869075)
+organism:
+  *
+    {x}
+    {x}
+generation 145: <MyProg:750.61849914> best=750.61849914 average=8105.60359111)
+organism:
+  *
+    {x}
+    {x}
+generation 146: <MyProg:750.61849914> best=750.61849914 average=8213.33515468)
+organism:
+  *
+    {x}
+    {x}
+generation 147: <MyProg:750.61849914> best=750.61849914 average=8356.37364289)
+organism:
+  *
+    {x}
+    {x}
+generation 148: <MyProg:750.61849914> best=750.61849914 average=5171.77742144)
+organism:
+  *
+    {x}
+    {x}
+generation 149: <MyProg:750.61849914> best=750.61849914 average=6750.13203032)
+organism:
+  *
+    {x}
+    {x}
+generation 150: <MyProg:750.61849914> best=750.61849914 average=4793.72327541)
+organism:
+  *
+    +
+      {x}
+      *
+        *
+          *
+            {0.0}
+            {2.0}
+          {10.0}
+        {0.0}
+    {x}
+generation 151: <MyProg:750.61849914> best=750.61849914 average=12267.4505996)
+organism:
+  *
+    {x}
+    {x}
+generation 152: <MyProg:750.61849914> best=750.61849914 average=11144.6449193)
+organism:
+  *
+    {x}
+    {x}
+generation 153: <MyProg:750.61849914> best=750.61849914 average=11214.8590811)
+organism:
+  *
+    +
+      {0.0}
+      {x}
+    {x}
+generation 154: <MyProg:750.61849914> best=750.61849914 average=5886.43235936)
+organism:
+  *
+    +
+      *
+        +
+          *
+            {y}
+            {10.0}
+          *
+            {y}
+            {2.0}
+        {0.0}
+      {x}
+    {x}
+generation 155: <MyProg:750.61849914> best=750.61849914 average=8613.63376598)
+organism:
+  *
+    +
+      {x}
+      {0.0}
+    {x}
+generation 156: <MyProg:750.61849914> best=750.61849914 average=8706.54078523)
+organism:
+  *
+    {x}
+    {x}
+generation 157: <MyProg:750.61849914> best=750.61849914 average=10034.5974458)
+organism:
+  *
+    {x}
+    {x}
+generation 158: <MyProg:750.61849914> best=750.61849914 average=6638.53488747)
+organism:
+  *
+    {x}
+    {x}
+generation 159: <MyProg:750.61849914> best=750.61849914 average=4292.34403767)
+organism:
+  *
+    {x}
+    {x}
+generation 160: <MyProg:750.61849914> best=750.61849914 average=7752.10697521)
+organism:
+  *
+    {x}
+    {x}
+generation 161: <MyProg:750.61849914> best=750.61849914 average=8576.25351878)
+organism:
+  *
+    {x}
+    {x}
+generation 162: <MyProg:750.61849914> best=750.61849914 average=4682.12613256)
+organism:
+  *
+    {x}
+    {x}
+generation 163: <MyProg:750.61849914> best=750.61849914 average=2224.33813991)
+organism:
+  *
+    {x}
+    {x}
+generation 164: <MyProg:750.61849914> best=750.61849914 average=12988.3377361)
+organism:
+  *
+    {x}
+    {x}
+generation 165: <MyProg:750.61849914> best=750.61849914 average=12126.1526645)
+organism:
+  *
+    {x}
+    {x}
+generation 166: <MyProg:750.61849914> best=750.61849914 average=3929.42567357)
+organism:
+  *
+    {x}
+    {x}
+generation 167: <MyProg:750.61849914> best=750.61849914 average=4051.53933283)
+organism:
+  *
+    {x}
+    {x}
+generation 168: <MyProg:750.61849914> best=750.61849914 average=7578.69555646)
+organism:
+  *
+    {x}
+    {x}
+generation 169: <MyProg:750.61849914> best=750.61849914 average=11789.9465841)
+organism:
+  *
+    {x}
+    {x}
+generation 170: <MyProg:750.61849914> best=750.61849914 average=14445.4797835)
+organism:
+  *
+    {x}
+    {x}
+generation 171: <MyProg:750.61849914> best=750.61849914 average=9299.52543904)
+organism:
+  *
+    {x}
+    {x}
+generation 172: <MyProg:750.61849914> best=750.61849914 average=9006.22832289)
+organism:
+  *
+    {x}
+    {x}
+generation 173: <MyProg:750.61849914> best=750.61849914 average=13294.4277718)
+organism:
+  *
+    {x}
+    {x}
+generation 174: <MyProg:750.61849914> best=750.61849914 average=9881.04244114)
+organism:
+  *
+    {x}
+    {x}
+generation 175: <MyProg:750.61849914> best=750.61849914 average=13451.6579887)
+organism:
+  *
+    {x}
+    {x}
+generation 176: <MyProg:750.61849914> best=750.61849914 average=11685.9612623)
+organism:
+  *
+    {x}
+    {x}
+generation 177: <MyProg:750.61849914> best=750.61849914 average=11681.4344596)
+organism:
+  *
+    {x}
+    {x}
+generation 178: <MyProg:750.61849914> best=750.61849914 average=8968.14233548)
+organism:
+  *
+    {x}
+    {x}
+generation 179: <MyProg:750.61849914> best=750.61849914 average=11344.2455655)
+organism:
+  *
+    {x}
+    {x}
+generation 180: <MyProg:750.61849914> best=750.61849914 average=11487.9499456)
+organism:
+  *
+    {x}
+    {x}
+generation 181: <MyProg:750.61849914> best=750.61849914 average=7431.42805568)
+organism:
+  *
+    {x}
+    {x}
+generation 182: <MyProg:750.61849914> best=750.61849914 average=18123.0770864)
+organism:
+  *
+    {x}
+    {x}
+generation 183: <MyProg:750.61849914> best=750.61849914 average=11763.2343004)
+organism:
+  *
+    {x}
+    {x}
+generation 184: <MyProg:750.61849914> best=750.61849914 average=5373.93867433)
+organism:
+  *
+    {x}
+    {x}
+generation 185: <MyProg:750.61849914> best=750.61849914 average=13574.5312445)
+organism:
+  *
+    {x}
+    {x}
+generation 186: <MyProg:750.61849914> best=750.61849914 average=12887.8467842)
+organism:
+  *
+    {x}
+    {x}
+generation 187: <MyProg:750.61849914> best=750.61849914 average=5475.01930077)
+organism:
+  *
+    *
+      {x}
+      {1.0}
+    {x}
+generation 188: <MyProg:750.61849914> best=750.61849914 average=8576.25351878)
+organism:
+  *
+    {x}
+    {x}
+generation 189: <MyProg:750.61849914> best=750.61849914 average=4775.03315181)
+organism:
+  *
+    {x}
+    {x}
+generation 190: <MyProg:750.61849914> best=750.61849914 average=4180.74689482)
+organism:
+  *
+    {x}
+    {x}
+generation 191: <MyProg:750.61849914> best=750.61849914 average=4775.03315181)
+organism:
+  *
+    {x}
+    {x}
+generation 192: <MyProg:750.61849914> best=750.61849914 average=4265.69800431)
+organism:
+  *
+    {x}
+    +
+      *
+        +
+          {0.0}
+          +
+            {2.0}
+            {0.0}
+        {0.0}
+      {x}
+generation 193: <MyProg:750.61849914> best=750.61849914 average=4292.34403767)
+organism:
+  *
+    {x}
+    *
+      {x}
+      *
+        {1.0}
+        {1.0}
+generation 194: <MyProg:750.61849914> best=750.61849914 average=6155.84577333)
+organism:
+  *
+    {x}
+    {x}
+generation 195: <MyProg:750.61849914> best=750.61849914 average=8613.63376598)
+organism:
+  *
+    +
+      *
+        {0.0}
+        {1.0}
+      {x}
+    +
+      *
+        +
+          {0.0}
+          +
+            {2.0}
+            {0.0}
+        {0.0}
+      {x}
+generation 196: <MyProg:750.61849914> best=750.61849914 average=4358.76281399)
+organism:
+  *
+    {x}
+    {x}
+generation 197: <MyProg:750.61849914> best=750.61849914 average=7504.36752896)
+organism:
+  *
+    {x}
+    +
+      *
+        {0.0}
+        +
+          {y}
+          {x}
+      {x}
+generation 198: <MyProg:750.61849914> best=750.61849914 average=5677.75230689)
+organism:
+  *
+    {x}
+    {x}
+generation 199: <MyProg:750.61849914> best=750.61849914 average=1029.3395569)
+failed after 100 generations, restarting
+organism:
+  *
+    {y}
+    {2.0}
+generation 200: <MyProg:45203.8692738> best=45203.8692738 average=1296060.56774)
+organism:
+  +
+    {1.0}
+    +
+      *
+        *
+          {x}
+          {x}
+        {0.0}
+      +
+        +
+          *
+            {1.0}
+            {1.0}
+          +
+            {y}
+            {y}
+        *
+          {x}
+          *
+            {1.0}
+            {x}
+generation 201: <MyProg:859.938856879> best=859.938856879 average=38196.6215259)
+organism:
+  +
+    +
+      {0.0}
+      +
+        +
+          {x}
+          *
+            {x}
+            {x}
+        {y}
+    {1.0}
+generation 202: <MyProg:714.648534642> best=714.648534642 average=26542.8721413)
+organism:
+  +
+    +
+      {0.0}
+      +
+        +
+          {x}
+          *
+            {x}
+            {x}
+        {y}
+    {1.0}
+generation 203: <MyProg:714.648534642> best=714.648534642 average=19583.9010041)
+organism:
+  +
+    +
+      {0.0}
+      +
+        +
+          {x}
+          *
+            {x}
+            {x}
+        {y}
+    {1.0}
+generation 204: <MyProg:714.648534642> best=714.648534642 average=15699.5663821)
+organism:
+  +
+    +
+      {0.0}
+      +
+        +
+          {x}
+          *
+            {x}
+            {x}
+        {y}
+    {1.0}
+generation 205: <MyProg:714.648534642> best=714.648534642 average=10580.1470958)
+organism:
+  +
+    +
+      {y}
+      {0.0}
+    *
+      {x}
+      {x}
+generation 206: <MyProg:0.0> best=0.0 average=5937.20828702)
+cracked!
