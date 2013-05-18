@@ -30,18 +30,29 @@ def MinimumSpanningTree(G):
 		subtrees.union(u,v)
 	return tree  
 
-def convertToAdjacent(A):
+def convertToAdjacent(A,M):
 	#nombre de noeuds arbre = nb d'arretes + 1
 	n=len(A)+1
-	AL=n*[0]
-	for i in range(n):
-		AL[i] = []
+	AL=[n*[] for i in range(n)]
+
 	for E in A:
-		AL[E[0]].append(E[1]);
-		AL[E[1]].append(E[0]);
+		AL[E[0]].append([E[1],M[E[0]][E[1]]]);
+		AL[E[1]].append([E[0],M[E[1]][E[0]]]);
 	return AL
 	
 	
-G=np.array([[0,1,2,5],[1,0,2,3],[2,2,0,1],[5,3,1,0]])
-F=MinimumSpanningTree(G)
-# print(convertToAdjacent(MinimumSpanningTree(G)))
+# G=np.array([[0,1,2,5],[1,0,2,3],[2,2,0,1],[5,3,1,0]])
+# print(G)
+# F=MinimumSpanningTree(G)
+# print(F)
+# print(convertToAdjacent(F))
+
+
+
+
+
+
+
+
+
+

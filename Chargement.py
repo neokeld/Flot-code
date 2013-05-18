@@ -20,9 +20,11 @@ def EuclideanDistMatrix(path):
 
 	for i in range(n):
 		for j in range(n):
-			M[i][j]=mth.sqrt((X[i]-X[j])**2+(Y[i]-Y[j])**2)
+			M[i][j]=np.round(mth.sqrt((X[i]-X[j])**2+(Y[i]-Y[j])**2),2)
 	return np.array(M)
 	
-F=K.MinimumSpanningTree(EuclideanDistMatrix("./dev/data/n10-1"))
+M=EuclideanDistMatrix("./dev/data/n10-1")
+print(M)
+F=K.MinimumSpanningTree(M)
 print(F)
-print(K.convertToAdjacent(F))
+print(K.convertToAdjacent(F,M))
