@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
 #
 # genetic.py - A utility class to facilitate experimentation
 # with genetic algorithm concepts.
@@ -7,20 +8,24 @@
 # Project page: http://hobbiton.thisside.net/genetic/
 # This software is provided under the BSD license:
 
-import sys, os, math, random
+import sys, os, math, random, MSTKruskal, UnionFind, Chargement
 
 class Genetic:
 
 	# Initialize values for genetic algorithm
 	# Param : max_nb_gen : nombre maximum de generation
-	def __init__(self, max_nb_gen, crossover_rate, mutation_rate, taille_population, K, nb_node):
+	def __init__(self, max_nb_gen, crossover_rate, mutation_rate, K, nb_node):
 	
 	
 		print "init"
 		# Topologie des noeud
-		self.graph = [][][]
+		self.graph = None
+		print "Graphe :"
+		print self.graph
 		# Liste de liste d'arêtes (constitue un chromosome)
-		self.list_edge = [][]
+		self.list_edge = [[0,0]]*7
+		print "Arêtes :"
+		print self.list_edge
 		# Numéro de génération en cours
 		self.nb_gen = 0
 		# Max nb de générations
@@ -30,22 +35,26 @@ class Genetic:
 		# Taux de mutation (%)
 		self.mutation_rate = mutation_rate
 		# Taille de la population
-		self.taille_population = taille_population
+		self.taille_population = 0
 		# Longueur de cycle Max :
 		self.K = K
 		# nombre de noeud
 		self.nb_node = nb_node 
 		# liste des chromosomes, c'est notre population
 		self.pop = []
+		# Profondeur de parcours max
+		self.profondeur = 4
 
 
 	# Generate a random chromosome string
 	def create_first_population(self):
 		print "create"
-		# les premiers chromosomes de base
-	
-
-
+		print
+		# le premier chromosome de base
+		M=Chargement.EuclideanDistMatrix("./dev/data/n40-2")
+		F=MSTKruskal.MinimumSpanningTree(M)	
+		self.graph = MSTKruskal.convertToAdjacent(F, M)
+			
 
 	# Build gene / operator mappings.
 	def build_gene_map(self):
@@ -58,37 +67,92 @@ class Genetic:
 		random.seed()
 		chrom1 = self.pop[i]
 		chrom2 = self.pop[j]
-		new_chrom = [][]
+		new_chrom = [[0,0]*self.K]
 		# pour chaque noeud
 		for k in range(nb_node):
 		    # il faut choisir un cycle parmi les deux chromosomes 
 		    r = random.randint(0,1)
-		    if(r==0):
+		    if r == 0 :
 			# on prend un bout de gene, ie on prend un cycle parmi tous les cyles du noeud k pour le chrom1
-			new_chrom[k] = chrom1[k][random.randint(0,len(chrom1[k]))
-		    else:
-			new_chrom[k] = chrom2[k][random.randint(0,len(chrom2[k]))
+			new_chrom[k] = chrom1[k][random.randint(0,len(chrom1[k]))]
+		    else :
+			new_chrom[k] = chrom2[k][random.randint(0,len(chrom2[k]))]
+
+		print new_chrom
+		self.pop.append(new_chrom)
 
 		# maintenant on a pour chaque noeud un cycle
-		# il faut toutefois retravaillé pour que chaque noeud il y est l'ensemble des cycles
+		# il faut toutefois retravaillé pour que chaque noeud il y ait l'ensemble des cycles
 	
 		#TODO
 
+	# fait l'ensemble des crossovers pour une génération
+	def crossover_all(self):
+	    random.seed()
+
+	    for i in range(self.taille_population):
+		r = rand(0,1)
+		if r <= crossover_rate :
+		    # ce chromosome va subir un crossover
+		    ri = randint(0, self.taille_population)
+		    if ri != i :
+			crossover(i,ri)
+	    print self.pop
 
 
-
-	# Do probablistic mutation operation.
-	def mutate(self, i):
+	# Fait une mutation i(probabiliste, peut ne pas faire de mutation dans certains cas)
+	def mutate(self, chromo, cycle):
 		print "mutate"
+		# on prend 1 noeud au hasard
+		random.seed()
+		n1 = random.randint(0, len(cycle)-3)
+		# on choisi 1 noeud à distance 2 du premier
+		n2 = cycle[n1+2]
+		# on supprime l'arrête suivant le n1
+		nTmp = cycle.pop(n1+1)
+		# si trouvé ou non
+		found = False
+		# noeud courant
+		current_node = n1
+		# chemin de n1 a n2
+		# on parcours en largeurs les voisins
+		# pour trouver un chemin entre les deux noeuds différent du chemin original
+		found = False
+		nodes_parcourues = [n1]
+		f = [n1]
+		while len(f) > 0 and not found:
+		    current_node = f[0]
+		    if current_node == n2 :
+			found = True
+			continue
 
-	# Compute result fitness using a simple rule.
-	def fitness(self):
+		    f = f[1:]
+		    for node, cout in self.graph[current_node] :
+			if node not in nodes_parcourues :
+			    nodes_parcourues.append(node)
+			    f.append(node)
+
+		print "f :"
+		print f
+		if f != []:
+		    f.pop(0)
+		    # on ajoute le chemin f trouvé dans l'ancien cycle
+		    cycle[n1+1:n1+1] = f
+		# on ajoute le cycle dans le chromosome
+		chromo.append(cycle)
+		# trier le chromosome par premier noeud de chaque gène
+		chromo.sort()
+
+
+	# fitness : évaluer un chromosome
+	def fitness(self, chromo):
 		print "fitness"
-		try:
-			self.fitness_value = 1 / (self.desired_value - self.current_result)
-		# A correct solution will return a divide by zero error.
-		except:
-			self.fitness_value = None 
+		#m = [[]]
+		#for gene in chromo:
+		#    for noeud in gene:
+			#noeud, noeud +1
+			
+		
 	
 	# Integer to binary string conversion.
 	def int_to_bin(self, i):
@@ -153,3 +217,25 @@ class Genetic:
 		else:
 			self.current_result = None
 		self.generation = self.generation + 1
+
+if __name__ == '__main__':
+    max_nb_gen = 8
+    crossover_rate = 0.7
+    mutation_rate = 0.5
+    K = 4
+    nb_node = 7
+    #g = Genetic(max_nb_gen, crossover_rate, mutation_rate, K, nb_node )
+    #g.create_first_population()
+    #g.crossover_all()
+    #chromo = []
+    #cycle = [0, 2, 3, 6, 5, 1]
+    #g.mutate(chromo, cycle)
+    #print "chromo :"
+    #print chromo
+    g = Genetic(max_nb_gen, crossover_rate, mutation_rate, K, nb_node )
+    g.create_first_population()
+    print g.graph
+    print g.pop
+    for i in range(20):
+	g.crossover_all()
+	print g.pop
