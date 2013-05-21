@@ -100,13 +100,15 @@ def getCycles(Lev,adL,k):
 			cycles.append(E)
 		return cycles
 
-M=EuclideanDistMatrix("./dev/data/n10-5")
-print(M)
-F=K.MinimumSpanningTree(M)
-print(F)
-adL=K.convertToAdjacentN(F)
-print(adL)
-Lev=getLevels(adL)
-print(Lev)
-print(getCycles(Lev,adL,5))
+if __name__ == '__main__':
+
+    M=EuclideanDistMatrix("./dev/data/n10-5")
+    print(M)
+    F=K.MinimumSpanningTree(M)
+    print(F)
+    adL=K.convertToAdjacentN(F)
+    print(adL)
+    Lev=getLevels(adL)
+    print(Lev)
+    print(getCycles(Lev,adL,3))
 
