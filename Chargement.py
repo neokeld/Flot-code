@@ -4,7 +4,8 @@ import MSTKruskal as K
 import numpy as np
 
 def EuclideanDistMatrix(path):
-	
+	#fonction qui charge un fichier de test et renvoie la matrice de couts 
+	#cout = distance euclidienne
 	f = open(path,"r")
 	nodes=[]
 	X=[]
@@ -25,25 +26,26 @@ def EuclideanDistMatrix(path):
 
 	
 def getLevels(L):
+	#retourne une liste de liste de noeud classe par niveaux
+	#par defaut le niveau 0 contient uniquement le noeud 0 (la racine)
 	n=len(L)
-	processedNodes=[]
+	processedNodesNodes=[]
 	lev=[]
 	lev.append([0])
-	processedNodes.append(0)
+	processedNodesNodes.append(0)
 	i=0
-	j=0
-	while j!=n-1:
+	while len(processedNodesNodes)<n:
 		lev.append([])
 		for v in lev[i]:
 			for e in L[v]:
-				if e not in processedNodes:
+				if e not in processedNodesNodes:
 					lev[i+1].append(e)
-					processedNodes.append(e)
-			j+=1
+					processedNodesNodes.append(e)
 		i+=1
 	return lev
 
-def frec(v,L,k,adL,Lev,i,Processed):
+def depthSearch(v,L,k,adL,Lev,i,processedNodes):
+	#fait un parcours en profondeur de longueur k a partir du noeud v
 	if len(L)==k:
 		return L
 	else:
@@ -51,24 +53,28 @@ def frec(v,L,k,adL,Lev,i,Processed):
 			if e in Lev[i-1]:
 				L.append(e);
 				if len(L)!=k:
-					Processed.append(e)
-				frec(e,L,k,adL,Lev,i-1,Processed)
+					processedNodes.append(e)
+				depthSearch(e,L,k,adL,Lev,i-1,processedNodes)
 	
 
+	
+	
 def getCycles(Lev,adL,k):
+	#recherches de cycles de longeur k en remontant des feuilles de l'arbre
 	cycles=[]
-	Processed=[]
+	processedNodes=[]
 	nbLevs=len(Lev)
 	for i in range(nbLevs-1,0,-1):
 		if k==i:
-			Processed=[]
+			processedNodes=[]
 		for e in Lev[i]:
-			if e not in Processed:
+			if e not in processedNodes:
 				T=[];
 				T.append(e)
-				frec(e,T,k,adL,Lev,i,Processed)
+				depthSearch(e,T,k,adL,Lev,i,processedNodes)
 				cycles.append(T)
 	
+	#Traitement des restes de longueur 2
 	stop=False
 	twoCycles=[]
 	while not stop:
@@ -84,7 +90,10 @@ def getCycles(Lev,adL,k):
 		return cycles
 	else:
 		if n==1:
-			twoCycles[0].append(adL[twoCycles[0][0]][0])
+			if adL[twoCycles[0][0]][0]==twoCycles[0][1]:
+				twoCycles[0].append(adL[twoCycles[0][0]][1])
+			else:
+				twoCycles[0].append(adL[twoCycles[0][0]][0])
 		else:
 			twoCycles[0].append(twoCycles[1][0])
 			for i in range(len(twoCycles)-1):
@@ -93,8 +102,7 @@ def getCycles(Lev,adL,k):
 			cycles.append(E)
 		return cycles
 
-
-M=EuclideanDistMatrix("./dev/data/n40-2")
+M=EuclideanDistMatrix("./dev/data/n10-5")
 print(M)
 F=K.MinimumSpanningTree(M)
 print(F)
@@ -102,9 +110,5 @@ adL=K.convertToAdjacentN(F)
 print(adL)
 Lev=getLevels(adL)
 print(Lev)
-# T=[]
-# T.append(6)
-# print(frec(6,T,3,Z,L,5))
-# print(T)
 print(getCycles(Lev,adL,3))
 
