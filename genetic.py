@@ -140,16 +140,19 @@ class Genetic:
 		    cycle[n1+1:n1+1] = f
 		# on ajoute le cycle dans le chromosome
 		chromo.append(cycle)
+		# trier le chromosome par premier noeud de chaque gène
+		chromo.sort()
 
 
-	# Compute result fitness using a simple rule.
-	def fitness(self):
+	# fitness : évaluer un chromosome
+	def fitness(self, chromo):
 		print "fitness"
-		try:
-			self.fitness_value = 1 / (self.desired_value - self.current_result)
-		# A correct solution will return a divide by zero error.
-		except:
-			self.fitness_value = None 
+		#m = [[]]
+		#for gene in chromo:
+		#    for noeud in gene:
+			#noeud, noeud +1
+			
+		
 	
 	# Integer to binary string conversion.
 	def int_to_bin(self, i):
@@ -221,11 +224,18 @@ if __name__ == '__main__':
     mutation_rate = 0.5
     K = 4
     nb_node = 7
+    #g = Genetic(max_nb_gen, crossover_rate, mutation_rate, K, nb_node )
+    #g.create_first_population()
+    #g.crossover_all()
+    #chromo = []
+    #cycle = [0, 2, 3, 6, 5, 1]
+    #g.mutate(chromo, cycle)
+    #print "chromo :"
+    #print chromo
     g = Genetic(max_nb_gen, crossover_rate, mutation_rate, K, nb_node )
     g.create_first_population()
-    g.crossover_all()
-    chromo = [[]]
-    cycle = [0, 2, 3, 6, 5, 1]
-    g.mutate(chromo, cycle)
-    print "chromo :"
-    print chromo
+    print g.graph
+    print g.pop
+    for i in range(20):
+	g.crossover_all()
+	print g.pop
