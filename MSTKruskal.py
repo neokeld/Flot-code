@@ -39,6 +39,16 @@ def convertToAdjacent(A,M):
 		AL[E[0]].append([E[1],M[E[0]][E[1]]]);
 		AL[E[1]].append([E[0],M[E[1]][E[0]]]);
 	return AL
+
+def convertToAdjacentN(A):
+	#nombre de noeuds arbre = nb d'arretes + 1
+	n=len(A)+1
+	AL=[n*[] for i in range(n)]
+
+	for E in A:
+		AL[E[0]].append(E[1]);
+		AL[E[1]].append(E[0]);
+	return AL
 	
 	
 # G=np.array([[0,1,2,5],[1,0,2,3],[2,2,0,1],[5,3,1,0]])
