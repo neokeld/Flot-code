@@ -8,7 +8,7 @@
 # Project page: http://hobbiton.thisside.net/genetic/
 # This software is provided under the BSD license:
 
-import sys, os, math, random
+import sys, os, math, random, MSTKruskal, UnionFind, Chargement
 
 class Genetic:
 
@@ -19,7 +19,7 @@ class Genetic:
 	
 		print "init"
 		# Topologie des noeud
-		self.graph = [[[0,0]]*7]*7
+		self.graph = None
 		print "Graphe :"
 		print self.graph
 		# Liste de liste d'arêtes (constitue un chromosome)
@@ -51,23 +51,9 @@ class Genetic:
 		print "create"
 		print
 		# le premier chromosome de base
-		self.graph[0][0] = [1, 3]
-		self.graph[0][1] = [2, 5]
-		self.graph[1][0] = [0, 3]
-		self.graph[1][2] = [5, 5]
-		self.graph[2][0] = [0, 5]
-		self.graph[2][1] = [3, 4]
-		self.graph[3][0] = [4, 3]
-		self.graph[3][1] = [6, 2]
-		self.graph[3][2] = [2, 4]
-		self.graph[4][0] = [5, 1]
-		self.graph[4][1] = [3, 3]
-		self.graph[5][0] = [1, 5]
-		self.graph[5][1] = [6, 8]
-		self.graph[5][2] = [4, 1]
-		self.graph[6][0] = [3, 2]
-		self.graph[6][1] = [5, 8]
-
+		M=Chargement.EuclideanDistMatrix("./dev/data/n40-2")
+		F=MSTKruskal.MinimumSpanningTree(M)	
+		self.graph = MSTKruskal.convertToAdjacent(F, M)
 			
 
 	# Build gene / operator mappings.
