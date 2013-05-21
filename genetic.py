@@ -1,11 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# genetic.py - A utility class to facilitate experimentation
-# with genetic algorithm concepts.
+# genetic.py - Une classe d'algorithmique génétique
 #
-# Version 1.0
-# Project page: http://hobbiton.thisside.net/genetic/
 # This software is provided under the BSD license:
 
 import sys, os, math, random, MSTKruskal, UnionFind, Chargement
@@ -14,9 +11,7 @@ class Genetic:
 
 	# Initialize values for genetic algorithm
 	# Param : max_nb_gen : nombre maximum de generation
-	def __init__(self, max_nb_gen, crossover_rate, mutation_rate, K, nb_node):
-	
-	
+	def __init__(self, max_nb_gen, crossover_rate, mutation_rate, K, nb_node):	
 		print "init"
 		# Topologie des noeud
 		self.graph = None
@@ -41,7 +36,7 @@ class Genetic:
 		# nombre de noeud
 		self.nb_node = nb_node 
 		# liste des chromosomes, c'est notre population
-		self.pop = []
+		self.pop = None
 		# Profondeur de parcours max
 		self.profondeur = 4
 
@@ -50,11 +45,14 @@ class Genetic:
 	def create_first_population(self):
 		print "create"
 		print
-		# le premier chromosome de base
+		# création du graphe
 		M=Chargement.EuclideanDistMatrix("./dev/data/n40-2")
 		F=MSTKruskal.MinimumSpanningTree(M)	
 		self.graph = MSTKruskal.convertToAdjacent(F, M)
-			
+		# création de la première population
+		adLN = MSTKruskal.convertToAdjacentN(F)
+		Lev = Chargement.getLevels(adLN)
+		self.pop = Chargement.getCycles(Lev, adLN, 3)
 
 	# Build gene / operator mappings.
 	def build_gene_map(self):
@@ -82,7 +80,7 @@ class Genetic:
 		self.pop.append(new_chrom)
 
 		# maintenant on a pour chaque noeud un cycle
-		# il faut toutefois retravaillé pour que chaque noeud il y ait l'ensemble des cycles
+		# il faut toutefois retravailler pour que chaque noeud il y ait l'ensemble des cycles
 	
 		#TODO
 
@@ -152,16 +150,7 @@ class Genetic:
 		#    for noeud in gene:
 			#noeud, noeud +1
 			
-		
-	
-	# Integer to binary string conversion.
-	def int_to_bin(self, i):
-		s = ""
-		while i:
-			s= (i & 1 and '1' or '0') + s
-			i >>= 1
-		return s or '0'
-		
+
 	# Calculate value for the current chromosome generation.
 	def calculate_generation(self):
 		print "calculate generation"
