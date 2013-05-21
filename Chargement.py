@@ -72,6 +72,7 @@ def getCycles(Lev,adL,k):
 				depthSearch(e,T,k,adL,Lev,i,nodesInCycle)
 				cycles.append(T)
 	
+	print(cycles)
 	#Traitement des restes de longueur 2 au cas ou il y'en a
 	stop=False
 	twoCycles=[]
@@ -84,15 +85,15 @@ def getCycles(Lev,adL,k):
 			stop=True
 	
 	n=len(twoCycles)
-	if n==0:
+	if n==0:#si aucun reste de longueur 2 on est bon!
 		return cycles
 	else:
-		if n==1:
-			if adL[twoCycles[0][0]][0]==twoCycles[0][1]:
-				twoCycles[0].append(adL[twoCycles[0][0]][1])
-			else:
-				twoCycles[0].append(adL[twoCycles[0][0]][0])
-		else:
+		if n==1:#s'il n y a qu'un seul, on le connecte avec son voisin direct
+			for v in adL[0]:
+				if v!=twoCycles[0][0]:
+					twoCycles[0].append(v)
+					break
+		else:#s'il ya plusieurs on les conectes tous entre eux
 			twoCycles[0].append(twoCycles[1][0])
 			for i in range(len(twoCycles)-1):
 				twoCycles[i+1].append(twoCycles[i][0])
@@ -101,14 +102,33 @@ def getCycles(Lev,adL,k):
 		return cycles
 
 if __name__ == '__main__':
+	
+	M=EuclideanDistMatrix("./dev/data/n20-1")
+	print("=====================")
+	print("Matrice de couts")
+	print("=====================")
+	print(M)
+	
+	print("=====================")
+	print("ACM sous forme de liste d'aretes")
+	print("=====================")
+	F=K.MinimumSpanningTree(M)
+	print(F)
 
-    M=EuclideanDistMatrix("./dev/data/n10-5")
-    print(M)
-    F=K.MinimumSpanningTree(M)
-    print(F)
-    adL=K.convertToAdjacentN(F)
-    print(adL)
-    Lev=getLevels(adL)
-    print(Lev)
-    print(getCycles(Lev,adL,3))
-
+	print("=====================")
+	print("Liste d'adjacence")
+	print("=====================")
+	adL=K.convertToAdjacentN(F)
+	print(adL)
+	
+	print("=====================")
+	print("Liste des Niveaux de l'ACM: par defaut, le noeud 0 est la racine")
+	print("=====================")
+	Lev=getLevels(adL)
+	print(Lev)
+	
+	print("=====================")
+	k=3
+	print("Solution finale: liste des cycles de longueur <=",k)
+	print("=====================")
+	print(getCycles(Lev,adL,k))
