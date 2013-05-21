@@ -72,7 +72,6 @@ def getCycles(Lev,adL,k):
 				depthSearch(e,T,k,adL,Lev,i,nodesInCycle)
 				cycles.append(T)
 	
-	print(cycles)
 	#Traitement des restes de longueur 2 au cas ou il y'en a
 	stop=False
 	twoCycles=[]
@@ -103,7 +102,7 @@ def getCycles(Lev,adL,k):
 
 if __name__ == '__main__':
 	
-	M=EuclideanDistMatrix("./dev/data/n20-1")
+	M=EuclideanDistMatrix("./dev/data/n40-1")
 	print("=====================")
 	print("Matrice de couts")
 	print("=====================")
@@ -128,7 +127,7 @@ if __name__ == '__main__':
 	print(Lev)
 	
 	print("=====================")
-	k=3
+	k=5
 	print("Solution finale: liste des cycles de longueur <=",k)
 	print("=====================")
 	print(getCycles(Lev,adL,k))
