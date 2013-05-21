@@ -29,22 +29,22 @@ def getLevels(L):
 	#retourne une liste de liste de noeud classe par niveaux
 	#par defaut le niveau 0 contient uniquement le noeud 0 (la racine)
 	n=len(L)
-	processedNodesNodes=[]
+	processedNodes=[]
 	lev=[]
 	lev.append([0])
-	processedNodesNodes.append(0)
+	processedNodes.append(0)
 	i=0
-	while len(processedNodesNodes)<n:
+	while len(processedNodes)<n:
 		lev.append([])
 		for v in lev[i]:
 			for e in L[v]:
-				if e not in processedNodesNodes:
+				if e not in processedNodes:
 					lev[i+1].append(e)
-					processedNodesNodes.append(e)
+					processedNodes.append(e)
 		i+=1
 	return lev
 
-def depthSearch(v,L,k,adL,Lev,i,processedNodes):
+def depthSearch(v,L,k,adL,Lev,i,nodesInCycle):
 	#fait un parcours en profondeur de longueur k a partir du noeud v
 	if len(L)==k:
 		return L
@@ -53,8 +53,8 @@ def depthSearch(v,L,k,adL,Lev,i,processedNodes):
 			if e in Lev[i-1]:
 				L.append(e);
 				if len(L)!=k:
-					processedNodes.append(e)
-				depthSearch(e,L,k,adL,Lev,i-1,processedNodes)
+					nodesInCycle.append(e)
+				depthSearch(e,L,k,adL,Lev,i-1,nodesInCycle)
 	
 
 	
@@ -62,19 +62,17 @@ def depthSearch(v,L,k,adL,Lev,i,processedNodes):
 def getCycles(Lev,adL,k):
 	#recherches de cycles de longeur k en remontant des feuilles de l'arbre
 	cycles=[]
-	processedNodes=[]
+	nodesInCycle=[]
 	nbLevs=len(Lev)
 	for i in range(nbLevs-1,0,-1):
-		if k==i:
-			processedNodes=[]
 		for e in Lev[i]:
-			if e not in processedNodes:
+			if e not in nodesInCycle:
 				T=[];
 				T.append(e)
-				depthSearch(e,T,k,adL,Lev,i,processedNodes)
+				depthSearch(e,T,k,adL,Lev,i,nodesInCycle)
 				cycles.append(T)
 	
-	#Traitement des restes de longueur 2
+	#Traitement des restes de longueur 2 au cas ou il y'en a
 	stop=False
 	twoCycles=[]
 	while not stop:
@@ -110,5 +108,5 @@ adL=K.convertToAdjacentN(F)
 print(adL)
 Lev=getLevels(adL)
 print(Lev)
-print(getCycles(Lev,adL,3))
+print(getCycles(Lev,adL,5))
 
