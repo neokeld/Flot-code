@@ -22,10 +22,10 @@
 			
 			\section{Analyse}
 				Pb de conception de réseaux:\\
-				Ens de terminaux. Pb est de relier ces terminaux entre eux pour un coût minimum de manière à ce que:
+				Nous avons un ensemble de terminaux. Le problème est de relier ces terminaux entre eux pour un coût minimum de manière à ce que :
 				\begin{itemize}
-					\item{Il existe un chemin entre toutes paures de terminaux}
-					\item{Ce réseau soit résistant aux pannes (Si un certain nombre d'arêtes tombent en panne, il faut que le réseau reste connecté)} 
+					\item{Il existe un chemin entre toutes paires de terminaux}
+					\item{Il faut que ce réseau soit résistant aux pannes (si un certain nombre d'arêtes tombent en panne, il faut que le réseau reste connecté)} 
 				\end{itemize}
 				
 				Une condition qui s'est révélée suffisante est que le réseau soit 2 arêtes connexes (entre toute paire de sommets, il existe 2 chemins arête-disjoints)\\
@@ -34,15 +34,15 @@
 				Données du problème:\\
 				
 				Graphe = (V,E) \\
-				V: ens des terminaux.\\
-				E: ens des liens possibles.\\
-				(on suppose que le graphe est complet (donc $E=V*V$) On peut créer tous les liens que l'on veut)\\
+				V: ensemble des terminaux.\\
+				E: ensemble des liens possibles.\\
+				On suppose que le graphe est complet (donc $E=V*V$). On peut créer tous les liens que l'on veut.\\
 				
-				$C_{ij}$ = Cout de construction du lien i,j $\forall $ i,j $\in E $\\
+				$C_{ij}$ = Coût de construction du lien i,j $\forall $ i,j $\in E $\\
 				
 				$\rightarrow $K, un entier (borne sur les cycles)\\
 				
-				Pb: déterminer les liens de E à créer tel que le graphe soit connexe et que chaque arête appartienne à un cycle de longueur $\le K$ tout en minimisant le coût.\\
+				Problème : déterminer les liens de E à créer tel que le graphe soit connexe et que chaque arête appartienne à un cycle de longueur $\le K$ tout en minimisant le coût.\\
 				
 				
 				
@@ -67,22 +67,22 @@
 				
 				
 				
-				Problème de couverture de l'exo 2 du td 2.\\
+				Problème de couverture de l'exercice 2 du td 2.\\
 				Rapport: 
 				\begin{itemize}
 					\item Introduction présentant le problème.\\
-					\item Explication de /des heuristiques que l'on propose.(algos , explication de l'algo et des éléments de base utilisées par l'algo)\\
-					\item Résultats numériques+analyse des résultats numériques.
-					\item conclusion
+					\item Explication de/des heuristiques que l'on propose.\\
+					\item Résultats numériques et analyse des résultats numériques.
+					\item Conclusion
 				\end{itemize}
-				Rapport + Code par mail pour le \textbf{17 Mai}
+		    
 			\section{Première heuristique}
-                            Afin d'appliquer un algorithme génétique, il a fallu générer une génération 0. Pour cela nous avons décidé d'implémenter une heuristique simple, qui permet d'obtenir une solution naïve mais valide. L'algorithme utilisé est le suivant : \begin{itemize}
+                            Afin d'appliquer un algorithme génétique, il a fallu générer une génération 0. Pour cela, nous avons décidé d'implémenter une heuristique simple, qui permet d'obtenir une solution naïve mais valide. L'algorithme utilisé est le suivant : \begin{itemize}
                         \item Calculer un arbre couvrant minimal.
                         \item Organiser l'ensemble des noeuds en différents niveaux en partant d'un noeud donné.
-                        \item Partir du plus bas niveau (contenant les feuilles les plus profondes) et créer des cycles de longueur K en remontant dans l'arbre sur K-1 niveaux
-                        \item Recommencer pour les noeuds du niveau supérieur
-                        \item Pour l'avant dernier niveau, faire des liens entre les branches de longueur 1
+                        \item Partir du plus bas niveau (contenant les feuilles les plus profondes) et créer des cycles de longueur K en remontant dans l'arbre sur K-1 niveaux.
+                        \item Recommencer pour les noeuds du niveau supérieur.
+                        \item Pour l'avant dernier niveau, faire des liens entre les branches de longueur 1.
                         \end{itemize}
                         Cela permet d'obtenir un graphe solution, puisque tous les noeuds ont été incorporés dans des cycles de longueur K ou moins.
                         \section{Algorithmes génétiques}
