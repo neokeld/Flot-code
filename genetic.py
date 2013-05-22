@@ -11,7 +11,7 @@ class Genetic:
 
 	# Initialize values for genetic algorithm
 	# Param : max_nb_gen : nombre maximum de generation
-	def __init__(self, max_nb_gen, crossover_rate, mutation_rate, K, nb_node):	
+	def __init__(self, max_nb_gen, crossover_rate, mutation_rate, K):	
 		print "init"
 		# Topologie des noeud
 		self.graph = None
@@ -29,16 +29,18 @@ class Genetic:
 		self.crossover_rate = crossover_rate
 		# Taux de mutation (%)
 		self.mutation_rate = mutation_rate
-		# Taille de la population
-		self.taille_population = 0
 		# Longueur de cycle Max :
 		self.K = K
 		# nombre de noeud
-		self.nb_node = nb_node 
+		self.nb_nodes = 0
 		# liste des chromosomes, c'est notre population
-		self.pop = None
+		self.pop = []
 		# Profondeur de parcours max
 		self.profondeur = 4
+		# matrice de cout WALA
+		self.M = None
+		# initialiser le moteur d'aléatoire
+		random.seed()
 
 
 	# Generate a random chromosome string
@@ -46,13 +48,18 @@ class Genetic:
 		print "create"
 		print
 		# création du graphe
-		M=Chargement.EuclideanDistMatrix("./dev/data/n40-2")
-		F=MSTKruskal.MinimumSpanningTree(M)	
-		self.graph = MSTKruskal.convertToAdjacent(F, M)
+		self.M=Chargement.EuclideanDistMatrix("./dev/data/n40-2")
+		self.nb_nodes = len(self.M)
+		F=MSTKruskal.MinimumSpanningTree(self.M)	
+		self.graph = MSTKruskal.convertToAdjacent(F, self.M)
 		# création de la première population
 		adLN = MSTKruskal.convertToAdjacentN(F)
 		Lev = Chargement.getLevels(adLN)
-		self.pop = Chargement.getCycles(Lev, adLN, 3)
+		#for cycle in Chargement.getCycles(Lev, adLN, 3):
+		#    self.pop.append([int(i) for i in cycle])
+		self.pop = [Chargement.getCycles(Lev, adLN, 3)]
+		print self.pop
+		print type(self.pop), type(self.pop[0][0])
 
 	# Build gene / operator mappings.
 	def build_gene_map(self):
@@ -60,20 +67,22 @@ class Genetic:
 
 		
 	# Do probablistic crossover operation.
-	def crossover(self, i, j):
-		print "crossover"
-		random.seed()
+	def crossover_old(self, i, j):
+		print "debut crossover"
 		chrom1 = self.pop[i]
+		print "chrom1 : ", chrom1
 		chrom2 = self.pop[j]
+		print "chrom2 : ", chrom2
 		new_chrom = [[0,0]*self.K]
 		# pour chaque noeud
 		for k in range(nb_node):
 		    # il faut choisir un cycle parmi les deux chromosomes 
 		    r = random.randint(0,1)
 		    if r == 0 :
-			# on prend un bout de gene, ie on prend un cycle parmi tous les cyles du noeud k pour le chrom1
+			# on prend un bout de gene, ie on prend un cycle parmi tous les cycles du noeud k pour le chrom1
 			new_chrom[k] = chrom1[k][random.randint(0,len(chrom1[k]))]
 		    else :
+			print "chrom2 : ", chrom2[k]
 			new_chrom[k] = chrom2[k][random.randint(0,len(chrom2[k]))]
 
 		print new_chrom
@@ -81,28 +90,58 @@ class Genetic:
 
 		# maintenant on a pour chaque noeud un cycle
 		# il faut toutefois retravailler pour que chaque noeud il y ait l'ensemble des cycles
-	
-		#TODO
-
+	def crossover(self, i, j):
+		bebe = self.pop[i] + self.pop[j]
+		print "Oh le beau bébé ! Bienvenue à ", bebe, " fils de ", self.pop[i], " et ", self.pop[j]
+		utile = [1] * len (bebe) #0 = non, 1 = peut-etre, 2 = necessaire
+		print utile
+		nb_judged = 0
+		while nb_judged < len (bebe):
+		    i = random.randint(0, len (bebe))
+		    if utile[i] != 1:
+			continue
+		    nodes = bebe[i]
+		    j = 0
+		    while nodes and j < len(bebe):
+			if j == i:
+			    j += 1
+			    continue
+			else:
+			    print "---nodes : ", nodes
+			    nodes_tmp = set(nodes)
+			    for n in nodes:
+				if bebe[j].count(n) > 0 and utile[j] >= 1:
+				    nodes_tmp.remove (n)
+			    nodes = nodes_tmp
+			    j += 1
+		    if nodes:
+			utile[i] = 2
+		    else:
+			utile[i] = 0
+		    nb_judged += 1
+		bebe_chromo = [bebe[gene] for gene in range(len(bebe)) if utile[gene] == 2]
+		self.pop.append(bebe_chromo)
 	# fait l'ensemble des crossovers pour une génération
 	def crossover_all(self):
-	    random.seed()
+	    print "debut crossover all"
 
-	    for i in range(self.taille_population):
-		r = rand(0,1)
+	    for i in range(len(self.pop)):
+		r = random.random()
+		print "r : ", r
 		if r <= crossover_rate :
 		    # ce chromosome va subir un crossover
-		    ri = randint(0, self.taille_population)
+		    ri = random.randint(0, len(self.pop) - 1)
+		    print "ri : ", ri, "i : ", i
 		    if ri != i :
-			crossover(i,ri)
+			print "appel crossover"
+			self.crossover(i,ri)
 	    print self.pop
 
 
 	# Fait une mutation i(probabiliste, peut ne pas faire de mutation dans certains cas)
-	def mutate(self, chromo, cycle):
+	def mutate_old(self, chromo, cycle):
 		print "mutate"
 		# on prend 1 noeud au hasard
-		random.seed()
 		n1 = random.randint(0, len(cycle)-3)
 		# on choisi 1 noeud à distance 2 du premier
 		n2 = cycle[n1+2]
@@ -141,15 +180,38 @@ class Genetic:
 		# trier le chromosome par premier noeud de chaque gène
 		chromo.sort()
 
+	def mutate(self, chromo):
+	    "fonction mutate simplifiée"
+	    #print "chromo : ", chromo
+	    for gene in chromo:
+		#print "gene : ", gene
+		n1 = random.randint(0, len(gene) -1)
+		n2 = random.randint(0, len(gene) -1)
+		tmp = gene[n1]
+		gene[n1] = n2
+		gene[n2] = tmp
+	    mutingNodes = []
+	    for gene in chromo:
+		n1 = random.randint(0, len(gene) -1)
+		mutingNodes.append((gene.pop(n1), n1))
+	    random.shuffle(mutingNodes)
+	    i = 0
+	    for n in mutingNodes:
+		chromo[i].insert(n[1], n[0])
+		i += 1
+
 
 	# fitness : évaluer un chromosome
 	def fitness(self, chromo):
 		print "fitness"
-		#m = [[]]
-		#for gene in chromo:
-		#    for noeud in gene:
-			#noeud, noeud +1
-			
+		m = set()
+		for gene in chromo:
+		    for i in range(-1 , len(gene) - 1):
+			m.add((min(gene[i], gene[i+1]), max(gene[i], gene[i+1])))
+		cout = 0
+		for arete in m:
+		    cout += self.M[arete[0]][arete[1]]
+		return  -1 * cout
 
 	# Calculate value for the current chromosome generation.
 	def calculate_generation(self):
@@ -207,12 +269,31 @@ class Genetic:
 			self.current_result = None
 		self.generation = self.generation + 1
 
+	def selectionNat(self, nb_surv):
+		bests = []
+		bestsCost = []
+		for ch in self.pop:
+			if len(bests) == 0:
+			    bests.append(ch)
+			    bestsCost.append(self.fitness(ch))
+			else:
+			    fit = self.fitness(ch)
+			    ind = bisect.bisect_left(bestsCosts, fit)
+			    bests.insert(ind, ch)
+			    bestsCost.insert(ind, fit)
+			    if len(bests) > nb_surv:
+				bests.pop()
+				bestsCost.pop()
+		self.pop = bests
+
 if __name__ == '__main__':
     max_nb_gen = 8
     crossover_rate = 0.7
     mutation_rate = 0.5
     K = 4
     nb_node = 7
+    nb_mutations = 5
+    nb_surv = 10
     #g = Genetic(max_nb_gen, crossover_rate, mutation_rate, K, nb_node )
     #g.create_first_population()
     #g.crossover_all()
@@ -221,10 +302,16 @@ if __name__ == '__main__':
     #g.mutate(chromo, cycle)
     #print "chromo :"
     #print chromo
-    g = Genetic(max_nb_gen, crossover_rate, mutation_rate, K, nb_node )
+    g = Genetic(max_nb_gen, crossover_rate, mutation_rate, K)
     g.create_first_population()
+    g.pop = g.pop * 30
     print g.graph
     print g.pop
     for i in range(20):
+	for ch in g.pop:
+	    for i in range(nb_mutations):
+		g.mutate(ch)
+	print "crossover all"
 	g.crossover_all()
+	g.selectionNat(nb_surv)
 	print g.pop
