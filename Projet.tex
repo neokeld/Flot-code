@@ -11,7 +11,7 @@
 		\end{title}
 		
 		
-		\section {	Enoncé}
+		\section {Enoncé}
 			Lors de la conception de réseaux de télécommunications, il est nécessaire non seulement de mettre en oeuvre des liaisons entre toutes les paires possibles de terminaux, mais également d'assurer le fonctionnement du réseau lors de la panne d'un lien. A cette fin, on va imposer, pour chacun des liens, qu'il existe un autre chemin, de longueur limitée, permettant de rerouter l'information en cas de panne du lien. Connaissant le coût d'établissement des liens, cette topologie de réseau doit être conçue pour un coût minimum.
 			\begin{itemize}
 				\item{Modéliser ce problème dans un graphe}
@@ -76,7 +76,35 @@
 					\item conclusion
 				\end{itemize}
 				Rapport + Code par mail pour le \textbf{17 Mai}
-				
+			\section{Première heuristique}
+                            Afin d'appliquer un algorithme génétique, il a fallu générer une génération 0. Pour cela nous avons décidé d'implémenter une heuristique simple, qui permet d'obtenir une solution naïve mais valide. L'algorithme utilisé est le suivant : \begin{itemize}
+                        \item Calculer un arbre couvrant minimal.
+                        \item Organiser l'ensemble des noeuds en différents niveaux en partant d'un noeud donné.
+                        \item Partir du plus bas niveau (contenant les feuilles les plus profondes) et créer des cycles de longueur K en remontant dans l'arbre sur K-1 niveaux
+                        \item Recommencer pour les noeuds du niveau supérieur
+                        \item Pour l'avant dernier niveau, faire des liens entre les branches de longueur 1
+                        \end{itemize}
+                        Cela permet d'obtenir un graphe solution, puisque tous les noeuds ont été incorporés dans des cycles de longueur K ou moins.
+                        \section{Algorithmes génétiques}
+                        Les algorithmes génétiques sont souvent utilisés pour des problèmes d'optimisation où il n'est pas possible de trouver la solution exacte en temps polynomiale, comme par exemple le Voyageur de Commerce. \\
+                        \subsection{Principe des algorithmes génétiques}
+                        On part d'une population de base. Chaque individu est composé d'un chromosome (ou plus). Un individu correspond à une solution réalisable du problème. Chaque chromosome est composé de gênes qui sont des unités atomiques de la solution.
+                        A partir de cette population de base, qui est la génération 0, on va créer une nouvelle génération à l'aide de deux opérations : crossover et mutation.
+                        \begin{itemize}
+                         \item Crossover : Il s'agit de créer un individu à partir de deux individus de la génération précédente. On peut par exemple prendre pour chaque gêne du chromosome une version au hasard du premier parent ou du second. Il s'agit de créer une solution réalisable :
+                         \item Mutation : Il s'agit de créer un individu à partir d'un individu de la génération précédente en lui appliquant des mutations, c'est à dire des changements aléatoires. Il faut que la solution soit toujours valide. \\\end{itemize}
+                   
+                        Pour que ces opérations soient possibles il faut que chaque chromosome soit "codé" d'une façon simple, le plus simple est de prendre un codage binaire d'une taille définie (nombre de noeuds par exemple).
+                        Avec ces nouveaux individus, il faut sélectionner la nouvelle génération. On définit une fonction "fitness" qui permet de mesurer la valeur d'une solution. Une solution simple est de garder les N meilleurs, avec N entier naturel.
+
+
+                       \subsection {Dans notre cas}
+                        Nous avons d'abord réfléchit à un codage binaire simple : pour chaque arrête i, le ième bit du chromosome est à 1 si i appartient à la solution, 0 sinon. Toutefois le problème est que le croisement de cette solution donne difficilement des solutions réalisables. 
+                        Notre codage est plus compliqué : Pour chaque noeud de la liste d'un noeud. Par exemple pour le noeud 4 [4,3,23,5] pour un cycle de longueur 4.
+                        On remarque qu'un noeud peut avoir plusieurs cycles. On pourrait retravailler à chaque fois nos solutions pour avoir tous les cycles. Sur un graphe où les noeuds ont peu de voisins, c'est une solution.
+                        \section{Analyse du résultat}
+                        Un problème qu'on a eu est de démarrer l'algorithme génétique, car il faut des suffisament différentes pour créer la première nouvelle génération.
+			\section{Conclusion}
 				
 				
 			\end{document}			
