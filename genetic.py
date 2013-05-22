@@ -1,8 +1,11 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# genetic.py - Une classe d'algorithmique génétique
+# genetic.py - A utility class to facilitate experimentation
+# with genetic algorithm concepts.
 #
+# Version 1.0
+# Project page: http://hobbiton.thisside.net/genetic/
 # This software is provided under the BSD license:
 
 import sys, os, math, random, MSTKruskal, UnionFind, Chargement
@@ -12,6 +15,7 @@ class Genetic:
 	# Initialize values for genetic algorithm
 	# Param : max_nb_gen : nombre maximum de generation
 	def __init__(self, max_nb_gen, crossover_rate, mutation_rate, K):	
+	
 		print "init"
 		# Topologie des noeud
 		self.graph = None
@@ -89,7 +93,7 @@ class Genetic:
 		self.pop.append(new_chrom)
 
 		# maintenant on a pour chaque noeud un cycle
-		# il faut toutefois retravailler pour que chaque noeud il y ait l'ensemble des cycles
+	
 	def crossover(self, i, j):
 		bebe = self.pop[i] + self.pop[j]
 		print "Oh le beau bébé ! Bienvenue à ", bebe, " fils de ", self.pop[i], " et ", self.pop[j]
@@ -121,6 +125,7 @@ class Genetic:
 		    nb_judged += 1
 		bebe_chromo = [bebe[gene] for gene in range(len(bebe)) if utile[gene] == 2]
 		self.pop.append(bebe_chromo)
+	
 	# fait l'ensemble des crossovers pour une génération
 	def crossover_all(self):
 	    print "debut crossover all"
@@ -204,6 +209,7 @@ class Genetic:
 	# fitness : évaluer un chromosome
 	def fitness(self, chromo):
 		print "fitness"
+		
 		m = set()
 		for gene in chromo:
 		    for i in range(-1 , len(gene) - 1):
